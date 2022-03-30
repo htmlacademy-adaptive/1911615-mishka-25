@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Сергей Толмачев](https://up.htmlacademy.ru/adaptive/25/user/1911615).
-* Наставник: `Неизвестно`.
+* Наставник: [Татьяна Симоненко](https://htmlacademy.ru/profile/tatien).
 
 ---
 
