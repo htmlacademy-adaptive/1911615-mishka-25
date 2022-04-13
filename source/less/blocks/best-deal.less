@@ -1,0 +1,99 @@
+.best-deal {
+  position: relative;
+  padding: 31px 30px 42px;
+  font-family: "Open Sans", "Arial", sans-serif;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 6px;
+    background-image: url("../img/background/zigzag-line.png");
+    background-repeat: repeat-x;
+  }
+}
+
+.best-deal__header {
+  margin: 0;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.best-deal__status {
+  margin: 0;
+  padding-bottom: 17.5px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: #63d1bb;
+  text-transform: uppercase;
+}
+
+.best-deal__description-list {
+  margin: 0;
+  padding-bottom: 28px;
+}
+
+.best-deal__description {
+  margin: 0;
+  padding-bottom: 28px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #444444;
+}
+
+.best-deal__description-item {
+  position: relative;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: minmax(97px, max-content) minmax(162px, max-content);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 1px;
+    background-color: #ececec;
+  }
+}
+
+.best-deal__description-term {
+  margin: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #444444;
+}
+
+.best-deal__description-definition {
+  margin: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #444444;
+}
+
+.best-deal__image {
+  display: block;
+  margin-bottom: 25.5px;
+}
+
+.best-deal__price {
+  display: block;
+  margin: 0;
+  padding-bottom: 24.5px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #444444;
+  text-align: center;
+}
