@@ -5,6 +5,7 @@
 
 .feedback__header {
   margin: 0;
+  max-width: 320px;
   padding-bottom: 14px;
   font-weight: 700;
   font-size: 25px;
@@ -78,4 +79,57 @@
 .feedback__slider-toggle--right {
   background-image: url("../img/background/huge-arrow-right.png");
   padding: 12px 41px 12px 37px;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback {
+    background-image: url("../img/background/feedback.jpg");
+    background-size: 350px 457px;
+    background-repeat: no-repeat;
+    padding-top: 82.5px;
+    position: relative;
+    min-height: 457px;
+  }
+
+  .feedback__slider {
+    position: relative;
+  }
+
+  .feedback__header {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .feedback__button {
+    position: absolute;
+    z-index: 1;
+    top: 82.5px;
+    right: 0;
+    min-width: 175px;
+    max-width: 300px;
+  }
+
+  .feedback-controls-wrapper {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .feedback {
+    padding-left: 175px;
+    padding-top: 78px;
+  }
+
+  .feedback__header {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .feedback__button {
+    top: 78px;
+  }
 }

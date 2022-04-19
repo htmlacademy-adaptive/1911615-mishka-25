@@ -11,9 +11,8 @@
 }
 
 .user-list__link {
-  position: relative;
-  display: block;
-  padding: 28.5px 30px 26.5px 76px;
+  display: flex;
+  padding: 28.5px 30px 26.5px;
   text-decoration: none;
   color: #000000;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -23,11 +22,11 @@
 }
 
 .user-list__icon {
+  min-width: 18px;
+  min-height: 18px;
   display: block;
-  position: absolute;
-  top: 30px;
-  left: 30px;
   fill: #00000033;
+  margin-right: 25px;
 }
 
 .user-list__icon--search {
@@ -35,5 +34,36 @@
 }
 
 .user-list__status {
-  display: block;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+@media (min-width: @tablet-width) {
+  .user-list {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
+    align-content: flex-start;
+  }
+
+  .user-list__item {
+    box-shadow: none;
+    max-width: 270px;
+    border-left: solid 1px #0000001a;
+  }
+
+  .user-list__link {
+    display: flex;
+    padding: 32px 31px 31px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .user-list__icon--search {
+    margin: 0;
+  }
+
+  .user-list__status--search {
+    .visually-hidden;
+  }
 }

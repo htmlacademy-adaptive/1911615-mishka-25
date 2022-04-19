@@ -17,14 +17,163 @@
   min-width: 40px;
   min-height: 40px;
   background-color: inherit;
-  background-image: url("../img/icons/icon-burger-menu.png");
+  background-image: url("../img/icons/icon-burger-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
   cursor: pointer;
 }
 
-.main-header__shipping-info {
+.main-header__site-nav {
+  display: flex;
+}
+
+.main-header__user-nav {
+  display: flex;
+}
+
+.main-header__special-nav {
   display: none;
 }
 
+.main-header__shipping-info {
+  display: none;
+  color: #444444;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-header__main-nav {
+    position: relative;
+  }
+
+  .main-header__nav-wrapper {
+    position: absolute;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .main-header__main-nav--closed .main-header__nav-wrapper {
+    display: none;
+  }
+
+  .main-header__main-nav--opened .main-header__nav-wrapper {
+    display: block;
+  }
+
+  .main-header__main-nav--no-script .main-header__nav-wrapper {
+    position: static;
+    display: block;
+  }
+
+  .main-header__toggle--no-script {
+    display: none;
+  }
+
+  .main-header__toggle--opened {
+    background-image: url("../img/icons/icon-burger-close.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    position: relative;
+    padding: 0 50px;
+  }
+
+  .main-header__top-header {
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 22px 50px 20px;
+  }
+
+  .main-header__toggle {
+    display: none;
+  }
+
+  .main-header__shipping-info {
+    display: block;
+    grid-area: shipping-info;
+    text-align: end;
+    align-items: center;
+    padding: 18px 30px;
+    margin-right: -50px;
+    padding-right: 50px;
+    background-color: #f1f1f1;
+    border-top: solid 1px #0000001a;
+  }
+
+  .main-header__shipping-info--index {
+    background-color: #fafafa;
+  }
+
+  .main-header__nav-wrapper {
+    display: grid;
+    grid-template-columns: 4fr 2fr 4fr;
+    grid-template-rows: minmax(89px, max-content) minmax(63px, max-content);
+    grid-template-areas: " . user-nav user-nav"
+      "site-nav site-nav shipping-info";
+  }
+
+  .main-header__site-nav {
+    grid-area: site-nav;
+    background-color: #f1f1f1;
+    border-top: solid 1px #0000001a;
+    margin-left: -50px;
+    padding-left: 50px;
+  }
+
+  .main-header__site-nav--index {
+    background-color: #fafafa;
+  }
+
+  .main-header__user-nav {
+    grid-area: user-nav;
+    justify-self: end;
+    margin-right: -30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__top-header {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .main-header__nav-wrapper {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 4fr;
+    grid-template-rows: minmax(89px, max-content) minmax(63px, max-content);
+    grid-template-areas: " site-nav . . user-nav"
+      "special-nav special-nav shipping-info shipping-info";
+  }
+
+  .main-header__site-nav {
+    background-color: #ffffff;
+    border: none;
+    margin-left: -30px;
+    padding-left: 0;
+  }
+
+  .main-header__special-nav {
+    display: flex;
+    grid-area: special-nav;
+    background-color: #f1f1f1;
+    border-top: solid 1px #0000001a;
+    margin-left: -50px;
+    padding-left: 50px;
+  }
+
+  .main-header__special-nav--index {
+    background-color: #fafafa;
+  }
+}

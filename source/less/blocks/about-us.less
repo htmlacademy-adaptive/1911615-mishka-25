@@ -24,95 +24,26 @@
   color: #000000;
 }
 
-.main-advantages__list {
-  list-style: none;
-  margin: 0;
-  padding: 41px 0;
-}
-
-.main-advantages__item {
-  position: relative;
-  padding: 41px 0;
-  margin: 0;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
-  color: #000000;
-}
-
-.main-advantages__item--flower::before {
-  content: "";
-  position: absolute;
-  top: -16px;
-  left: 8px;
-  z-index: 1;
-  width: 33px;
-  height: 38px;
-  background-image: url("../img/icons/icon-flower.png");
-  background-repeat: no-repeat;
-}
-
-.main-advantages__item--dollar::before {
-  content: "";
-  position: absolute;
-  top: -26px;
-  left: 0;
-  z-index: 1;
-  width: 47px;
-  height: 27px;
-  background-image: url("../img/icons/icon-dollar.png");
-  background-repeat: no-repeat;
-}
-
-.main-advantages__item--heart::before {
-  content: "";
-  position: absolute;
-  top: -21px;
-  left: 7px;
-  z-index: 1;
-  width: 34px;
-  height: 27px;
-  background-image: url("../img/icons/icon-heart.png");
-  background-repeat: no-repeat;
-}
-
-.main-advantages__item--ball::before {
-  content: "";
-  position: absolute;
-  top: -17px;
-  left: 3px;
-  z-index: 1;
-  width: 35px;
-  height: 34px;
-  background-image: url("../img/icons/icon-ball.png");
-  background-repeat: no-repeat;
-}
-
-.main-advantages__item--rocket::before {
-  content: "";
-  position: absolute;
-  top: -26px;
-  left: -6px;
-  z-index: 1;
-  width: 55px;
-  height: 23px;
-  background-image: url("../img/icons/icon-rocket.png");
-  background-repeat: no-repeat;
-}
-
-.main-advantages__item--gift::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 3px;
-  z-index: 1;
-  width: 33px;
-  height: 32px;
-  background-image: url("../img/icons/icon-gift.png");
-  background-repeat: no-repeat;
-}
 
 .about-us__feedback-wrapper {
   margin: 0;
-  padding: 17px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us {
+    padding: 54px 50px 51px;
+  }
+
+  .about-us__header {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us__header {
+    padding-left: 175px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
