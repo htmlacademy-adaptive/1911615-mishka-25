@@ -28,3 +28,39 @@
 .radio-button-group__item + .radio-button-group__item {
   margin-top: 24px;
 }
+
+
+@media (min-width: @tablet-width) {
+  .radio-button-group {
+    border-top: none;
+    display: grid;
+    grid-template-columns: 147px 1fr;
+    column-gap: 20px;
+  }
+
+  .radio-button-group__title {
+    float: left;
+    padding-top: 66px;
+    width: 100%;
+  }
+
+  .radio-button__list {
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .radio-button-group {
+    grid-template-columns: 154px 1fr;
+  }
+
+  .radio-button-group__title {
+    padding-left: 46px;
+    padding-top: 67px;
+
+  }
+
+  .radio-button-group__list {
+    margin-top: 48px;
+  }
+}
