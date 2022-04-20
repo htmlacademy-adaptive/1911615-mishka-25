@@ -8,3 +8,23 @@
   padding: 0;
   list-style: none;
 }
+
+@media (min-width: @tablet-width) {
+  .main-catalog {
+    margin: 67px 50px 53px;
+  }
+
+  .main-catalog__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 54px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-catalog__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 51px;
+  }
+}
