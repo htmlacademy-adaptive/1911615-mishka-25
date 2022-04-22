@@ -22,6 +22,7 @@
   font-size: 25px;
   line-height: 30px;
   color: #000000;
+  grid-area: best-deal__header;
 }
 
 .best-deal__status {
@@ -32,11 +33,13 @@
   line-height: 20px;
   color: #63d1bb;
   text-transform: uppercase;
+  grid-area: best-deal__status;
 }
 
 .best-deal__description-list {
   margin: 0;
   padding-bottom: 28px;
+  grid-area: best-deal__description-list;
 }
 
 .best-deal__description {
@@ -46,6 +49,7 @@
   font-size: 15px;
   line-height: 24px;
   color: #444444;
+  grid-area: best-deal__description;
 }
 
 .best-deal__description-item {
@@ -83,8 +87,10 @@
 }
 
 .best-deal__image {
+  box-sizing: border-box;
   display: block;
   margin-bottom: 25.5px;
+  grid-area: best-deal__image;
 }
 
 .best-deal__price {
@@ -96,4 +102,121 @@
   line-height: 24px;
   color: #444444;
   text-align: center;
+  grid-area: best-deal__price;
+}
+
+.best-deal__button {
+  grid-area: best-deal__button;
+}
+
+@media (min-width: @tablet-width) {
+  .best-deal {
+    position: relative;
+    padding: 40.5px 50px 42px;
+    display: grid;
+    grid-template-areas: "best-deal__header best-deal__header best-deal__status"
+      "best-deal__description best-deal__image best-deal__image"
+      "best-deal__description-list best-deal__image best-deal__image"
+      "best-deal__price best-deal__image best-deal__image"
+      "best-deal__button best-deal__image best-deal__image";
+    grid-template-columns: minmax(292px, 64%) minmax(167px, 36%) 126px;
+    column-gap: 42px;
+    row-gap: 33px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 17px;
+      background-image: url("../img/background/zigzag-line.png");
+      background-repeat: repeat-x;
+    }
+  }
+
+  .best-deal__header {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .best-deal__status {
+    text-align: center;
+    padding: 6px 0 10px;
+  }
+
+  .best-deal__description {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .best-deal__price {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 12px 0 0;
+  }
+
+  .best-deal__image {
+    padding-top: 17px;
+    object-fit: fill;
+    // Fill только для теста исправить!!!
+    margin: 0;
+    min-height: 404px;
+    min-width: 334px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .best-deal {
+    position: relative;
+    padding: 40.5px 50px 42px;
+    display: grid;
+    grid-template-areas: "best-deal__status best-deal__header best-deal__image"
+      ". best-deal__description best-deal__image"
+      ". best-deal__description-list best-deal__image"
+      ". best-deal__price best-deal__image"
+      ". best-deal__button best-deal__image";
+    grid-template-columns: 133px minmax(292px, 27.8%) minmax(541px, 52%);
+    column-gap: 42px;
+    row-gap: 33px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 17px;
+      background-image: url("../img/background/zigzag-line.png");
+      background-repeat: repeat-x;
+    }
+  }
+
+  .best-deal__status {
+    text-align: center;
+    padding: 69px 1px 17px 32px;
+  }
+
+  .best-deal__header {
+    grid-area: 2/4/1/2;
+    z-index: 1;
+    align-self: end;
+    padding-bottom: 2px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .best-deal__description {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .best-deal__image {
+    padding-top: 0;
+    padding-left: 16px;
+    min-height: 636px;
+    min-width: 525px;
+  }
 }
