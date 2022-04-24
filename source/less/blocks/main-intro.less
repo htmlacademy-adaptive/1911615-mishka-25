@@ -19,3 +19,38 @@
 
   color: #000000;
 }
+
+@media (min-width: @tablet-width) {
+  .main-intro {
+    min-height: 692px;
+    position: relative;
+  }
+
+  .main-intro__wrapper {
+    min-height: 561px;
+  }
+
+  .main-intro__main-header {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .main-intro__categories-nav {
+    position: relative;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-intro {
+    min-height: 699px;
+  }
+
+  .main-intro__wrapper {
+    min-height: 563px;
+  }
+
+  .main-intro__main-header {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
