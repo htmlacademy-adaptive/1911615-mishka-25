@@ -28,3 +28,44 @@
 .phone-group__item + .phone-group__item {
   margin-top: 21.85px;
 }
+
+@media (min-width: @tablet-width) {
+  .phone-group {
+    background-color: #f1f1f1;
+    margin: 0 -50px;
+    padding: 0 50px;
+    border-top: none;
+    display: grid;
+    grid-template-columns: 147px 1fr;
+    column-gap: 20px;
+  }
+
+  .phone-group__title {
+    float: left;
+    padding-top: 66px;
+    width: 100%;
+  }
+
+  .phone-group__list {
+    margin-top: 50px;
+  }
+
+  .phone-group__item + .text-group__item {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .phone-group {
+    grid-template-columns: 154px 1fr;
+  }
+
+  .phone-group__title {
+    padding-left: 46px;
+    padding-top: 67px;
+  }
+
+  .phone-group__item {
+    margin-right: 173px;
+  }
+}

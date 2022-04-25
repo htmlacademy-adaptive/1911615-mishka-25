@@ -19,7 +19,7 @@
   min-width: 260px;
   min-height: 52px;
   border: none;
-  box-shadow: inset 0 -2px 0 #000000;
+  border-bottom: solid 2px #000000;
   font-weight: 400;
   font-size: 19px;
   line-height: 18px;
@@ -33,4 +33,27 @@
   line-height: 18px;
   color: #000000;
   opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .text-control__label {
+    padding-right: 22px;
+    align-self: center;
+  }
+
+  .text-control__field {
+    min-width: 375px;
+  }
+
+  .text-control__field--name {
+    min-width: 428px;
+  }
+
+  .text-control__field--surname {
+    margin-left: 3px;
+  }
+
+  .text-control__field--middle-name {
+    margin-left: 2px;
+  }
 }

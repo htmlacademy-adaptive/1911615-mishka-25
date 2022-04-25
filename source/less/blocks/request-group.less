@@ -28,3 +28,43 @@
 .request-group__item + .request-group__item {
   margin-top: 21.85px;
 }
+
+@media (min-width: @tablet-width) {
+  .request-group {
+    margin: 0 -50px;
+    padding: 0 50px;
+    border-top: none;
+    display: grid;
+    grid-template-columns: 147px 1fr;
+    column-gap: 20px;
+  }
+
+  .request-group__title {
+    float: left;
+    padding-top: 66px;
+    width: 100%;
+  }
+
+  .request-group__list {
+    margin-top: 50px;
+  }
+
+  .request-group__item + .text-group__item {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .request-group {
+    grid-template-columns: 154px 1fr;
+  }
+
+  .request-group__title {
+    padding-left: 46px;
+    padding-top: 67px;
+  }
+
+  .request-group__item {
+    margin-right: 173px;
+  }
+}
