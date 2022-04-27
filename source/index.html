@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/icons/icon-favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="icon.webmanifest">
     <title>HTML Academy: Мишка</title>
     <script defer src="js/burger-menu.js"></script>
   </head>
@@ -13,7 +15,11 @@
     <header class="main-header">
       <div class="main-header__top-header">
         <a class="main-header__logo-link" href="#">
-          <img class="main-header__logo-img" src="img/logo/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка».">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo/logo-header-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-header-tablet.svg">
+            <img class="main-header__logo-img" src="img/logo/logo-header-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка».">
+          </picture>
         </a>
         <button class="main-header__toggle main-header__toggle--closed main-header__toggle--no-script" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -111,7 +117,13 @@
             <dd class="best-deal__description-definition">15 см</dd>
           </div>
         </dl>
-        <img class="best-deal__image" src="img/content/knitted-basket-foto.jpg" width="260" height="315" alt="Три вязаные корзинки">
+        <div class="best-deal__image-wrapper">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/content/weeks-choice/knitted-basket-desktop.jpg 1x, img/content/weeks-choice/knitted-basket-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/content/weeks-choice/knitted-basket-tablet.jpg 1x, img/content/weeks-choice/knitted-basket-tablet@2x.jpg 2x">
+            <img class="best-deal__image" src="img/content/weeks-choice/knitted-basket-mobile.jpg" srcset="img/content/weeks-choice/knitted-basket-mobile.jpg 1x, img/content/weeks-choice/knitted-basket-mobile@2x.jpg 2x" width="260" height="315" alt="Три вязаные корзинки">
+          </picture>
+        </div>
         <b class="best-deal__price">Цена: 990 руб.</b>
         <!-- <button class="best-deal__button button-main" type="button">Заказать</button> -->
         <a class="best-deal__button button-main button-main--link" href="form.html">Заказать</a>
