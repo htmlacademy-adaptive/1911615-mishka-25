@@ -2,10 +2,14 @@
   position: relative;
   min-width: 260px;
   min-height: 150px;
-  background-image: url("../img/background/video-background.jpg");
+  background-image: url("../img/background/production-video/video-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/production-video/video-background-mobile@2x.jpg");
+  }
 }
 
 .production-video__button {
@@ -16,4 +20,27 @@
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .production-video {
+    min-width: 668px;
+    min-height: 455px;
+    background-image: url("../img/background/production-video/video-background-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/production-video/video-background-tablet@2x.jpg");
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production-video {
+    min-width: 682.6px;
+    background-image: url("../img/background/production-video/video-background-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/production-video/video-background-desktop@2x.jpg");
+    }
+  }
 }

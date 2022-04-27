@@ -86,11 +86,16 @@
   color: #444444;
 }
 
-.best-deal__image {
+.best-deal__image-wrapper {
   box-sizing: border-box;
   display: block;
   margin-bottom: 25.5px;
   grid-area: best-deal__image;
+}
+
+.best-deal__image {
+  display: block;
+  margin: 0;
 }
 
 .best-deal__price {
@@ -157,11 +162,12 @@
     padding: 12px 0 0;
   }
 
-  .best-deal__image {
+  .best-deal__image-wrapper {
     padding-top: 17px;
-    object-fit: fill;
-    // Fill только для теста исправить!!!
     margin: 0;
+  }
+
+  .best-deal__image {
     min-height: 404px;
     min-width: 334px;
   }
@@ -213,9 +219,13 @@
     line-height: 30px;
   }
 
-  .best-deal__image {
+  .best-deal__image-wrapper {
+    margin: 0;
     padding-top: 0;
     padding-left: 16px;
+  }
+
+  .best-deal__image {
     min-height: 636px;
     min-width: 525px;
   }

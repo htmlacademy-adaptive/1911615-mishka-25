@@ -83,12 +83,16 @@
 
 @media (min-width: @tablet-width) {
   .feedback {
-    background-image: url("../img/background/feedback.jpg");
+    background-image: url("../img/background/feedback/feedback.jpg");
     background-size: 350px 457px;
     background-repeat: no-repeat;
     padding-top: 82.5px;
     position: relative;
     min-height: 457px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/feedback/feedback@2x.jpg");
+    }
   }
 
   .feedback__slider {
