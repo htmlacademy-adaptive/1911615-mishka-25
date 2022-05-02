@@ -1,7 +1,8 @@
 .feedback {
   font-family: "Open Sans", "Arial", sans-serif;
-  margin: 0;
+  margin: 0 auto;
   box-sizing: border-box;
+  width: calc(@mobile-width - 60px);
 }
 
 .feedback__header {
@@ -88,17 +89,33 @@
 
 @media (min-width: @tablet-width) {
   .feedback {
-    background-image: url("../img/background/feedback/feedback.jpg");
-    background-size: 350px 457px;
-    background-repeat: no-repeat;
     padding-top: 82.5px;
     position: relative;
     min-height: 457px;
     width: calc(@tablet-width - 100px);
     margin: 0 auto;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/feedback/feedback@2x.jpg");
+    &::before {
+      content: "";
+      top: 0;
+      left: calc(-1 / 2 * (100vw - @tablet-width) - 50px);
+      z-index: -1;
+      display: block;
+      width: 350px;
+      height: 457px;
+      background-image: url("../img/background/feedback/feedback.jpg");
+      background-size: 350px 457px;
+      background-repeat: no-repeat;
+      position: absolute;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background/feedback/feedback@2x.jpg");
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 0;
+        left: 0;
+      }
     }
   }
 
@@ -160,8 +177,6 @@
     background-position: 48% 49%;
     border: none;
   }
-
-
 }
 
 @media (min-width: @desktop-width) {

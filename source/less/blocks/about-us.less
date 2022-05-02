@@ -7,7 +7,7 @@
     content: "";
     position: absolute;
     bottom: 0;
-    left: calc(-1 / 2 * (100vw - @mobile-width));
+    left: 0;
     z-index: 1;
     width: 100vw;
     height: 6px;
@@ -15,14 +15,14 @@
     background-repeat: repeat-x;
 
     @media (min-width: @tablet-width) {
-      left: calc((-1 / 2 * (100vw - @tablet-width)) - 7px);
+      left: 0;
       width: calc(100vw + 7px);
       height: 17px;
       background-image: url("../img/background/snake-gray-tablet.svg");
     }
 
     @media (min-width: @desktop-width) {
-      left: calc((-1 / 2 * (100vw - @desktop-width)) - 7px);
+      left: 0;
       width: calc(100vw + 7px);
       height: 23px;
       background-image: url("../img/background/snake-gray-desktop.svg");
