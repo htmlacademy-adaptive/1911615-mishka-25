@@ -15,16 +15,6 @@
     height: 6px;
     background-image: url("../img/background/snake-gray-mobile.svg");
     background-repeat: repeat-x;
-
-    @media (min-width: @tablet-width) {
-
-      background-image: url("../img/background/snake-gray-desktop.svg");
-    }
-
-    @media (min-width: @desktop-width) {
-      left: calc(-1 / 2 * (100vw - @desktop-width));
-      background-image: url("../img/background/snake-gray-desktop.svg");
-    }
   }
 }
 
@@ -154,7 +144,7 @@
       bottom: 0;
       z-index: 1;
       left: calc((-1 / 2 * (100vw - @tablet-width)) - 7px);
-      width: calc (100vw + 7px);
+      width: calc(100vw + 7px);
       height: 17px;
       background-image: url("../img/background/snake-gray-tablet.svg");
       background-repeat: repeat-x;
@@ -227,7 +217,7 @@
       bottom: -45px;
       left: calc((-1 / 2 * (100vw - @desktop-width)) - 7px);
       z-index: 1;
-      width: calc (100vw + 7px);
+      width: calc(100vw + 7px);
       height: 23px;
       background-image: url("../img/background/snake-gray-desktop.svg");
       background-repeat: repeat-x;
