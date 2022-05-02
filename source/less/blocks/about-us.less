@@ -15,15 +15,11 @@
     background-repeat: repeat-x;
 
     @media (min-width: @tablet-width) {
-      left: 0;
-      width: calc(100vw + 7px);
       height: 17px;
       background-image: url("../img/background/snake-gray-tablet.svg");
     }
 
     @media (min-width: @desktop-width) {
-      left: 0;
-      width: calc(100vw + 7px);
       height: 23px;
       background-image: url("../img/background/snake-gray-desktop.svg");
     }
@@ -31,6 +27,7 @@
 }
 
 .about-us__header {
+  box-sizing: border-box;
   width: calc(@mobile-width - 60px);
   margin: 0 auto;
   margin-bottom: -1px;
@@ -58,13 +55,13 @@
   }
 
   .about-us__header {
-    width: calc(@tablet-width - 60px);
+    width: calc(@tablet-width - 100px);
     font-size: 43px;
     line-height: 50px;
   }
 
   .about-us__advantages-wrapper {
-    width: calc(@tablet-width - 60px);
+    width: calc(@tablet-width - 100px);
     margin-bottom: 82px;
   }
 }
@@ -75,14 +72,14 @@
   }
 
   .about-us__header {
-    width: calc(@desktop-width - 60px);
+    width: calc(@desktop-width - 100px);
     padding-left: 175px;
     font-size: 53px;
     line-height: 57px;
   }
 
   .about-us__advantages-wrapper {
-    width: calc(@desktop-width - 60px);
+    width: calc(@desktop-width - 100px);
     margin-bottom: 88px;
   }
 }
