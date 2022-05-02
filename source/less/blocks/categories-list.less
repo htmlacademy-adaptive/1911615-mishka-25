@@ -5,6 +5,11 @@
   background-color: #56c3b2;
 }
 
+.categories-list__item {
+  position: relative;
+  min-height: 103px;
+}
+
 .categories-list__item--interior .categories-list__description::after {
   content: "";
   position: absolute;
@@ -46,10 +51,12 @@
 
 .categories-list__item:hover .categories-list__description::after {
   opacity: 0.7;
+  margin-top: -5px;
 }
 
 .categories-list__item:active .categories-list__description::after {
   opacity: 0.3;
+  margin-top: -5px;
 }
 
 .categories-list__item:hover,
@@ -77,6 +84,43 @@
   text-decoration: none;
   text-align: left;
   color: #ffffff;
+}
+
+.categories-list__item:hover .categories-list__link,
+.categories-list__item:active .categories-list__link {
+  padding-top: 19px;
+}
+
+.categories-list__link::before {
+  content: none;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 5px;
+  background-color: #56c3b2;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100vw;
+    left: calc(-1 / 2 * (100vw - 320px));
+  }
+}
+
+.categories-list__item:nth-of-type(2n+1) .categories-list__link::before {
+  background-color: #63d1bb;
+}
+
+.categories-list__item:hover .categories-list__link::before,
+.categories-list__item:active .categories-list__link::before {
+  content: "";
+  background-color: #46c1ae;
+}
+
+.categories-list__item:nth-of-type(2n+1):hover .categories-list__link::before,
+.categories-list__item:nth-of-type(2n+1):active .categories-list__link::before {
+  content: "";
+  background-color: #59d5bc;
 }
 
 .categories-list__description {
@@ -117,6 +161,11 @@
     padding: 25px 160px 31px 36px;
   }
 
+  .categories-list__item:hover .categories-list__link,
+  .categories-list__item:active .categories-list__link {
+    padding-top: 20px;
+  }
+
   .categories-list__description {
     font-size: 20px;
     line-height: 30px;
@@ -148,5 +197,10 @@
 
   .categories-list__link {
     padding: 26px 160px 31px 36.5px;
+  }
+
+  .categories-list__item:hover .categories-list__link,
+  .categories-list__item:active .categories-list__link {
+    padding-top: 21px;
   }
 }
