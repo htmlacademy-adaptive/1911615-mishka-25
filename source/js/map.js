@@ -8,7 +8,7 @@ function init () {
         }),
 
         myPlacemark1 = new ymaps.Placemark([59.938631, 30.323055], {
-            balloonContent: 'Маленькая иконка'
+            balloonContent: 'Магазин изделий ручной работы "Мишка"'
         }, {
             iconLayout: 'default#image',
             iconImageClipRect: [[0,0], [67, 100]],

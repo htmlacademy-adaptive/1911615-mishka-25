@@ -1,12 +1,16 @@
 .main-catalog {
   font-family: "Open Sans", "Arial", sans-serif;
-  margin: 30px;
+  margin: 30px 0;
 }
 
 .main-catalog__list {
-  margin: 0;
+  width: calc(@mobile-width - 60px);
+  margin: 0 auto;
   padding: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
 }
 
 @media (min-width: @tablet-width) {
@@ -15,14 +19,18 @@
   }
 
   .main-catalog__list {
-    display: grid;
-    grid-template-columns: 1fr;
+    width: calc(@tablet-width - 100px);
     row-gap: 54px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .main-catalog {
+    margin: 111px 50px 57px;
+  }
+
   .main-catalog__list {
+    width: calc(@desktop-width - 100px);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 51px;

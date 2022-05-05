@@ -91,18 +91,22 @@
         <h2 class="main-catalog__header visually-hidden">Список товаров доступных для заказа</h2>
         <ul class="main-catalog__list ">
           <li class="main-catalog__item product-card">
-            <a class="product-card__link" href="#">
+            <div class="product-card__wrapper">
+              <a href="" class="product-card__image-link">
                 <picture>
                   <source media="(min-width: 1150px)" srcset="img/content/catalog/catalog-rabbit-desktop.jpg 1x, img/content/catalog/catalog-rabbit-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/content/catalog/catalog-rabbit-tablet.jpg 1x, img/content/catalog/catalog-rabbit-tablet@2x.jpg 2x">
                   <img class="product-card__image" src="img/content/catalog/catalog-rabbit-mobile.jpg" srcset="img/content/catalog/catalog-rabbit-mobile.jpg 1x, img/content/catalog/catalog-rabbit-mobile@2x.jpg 2x" width="260" height="195" alt="Вязаный зайчик">
                 </picture>
+              </a>
               <div class="product-card__info">
-                <h3 class="product-card__title">Зайчик-попрыгайчик</h3>
+                <a href="" class="product-card__title-link">
+                  <h3 class="product-card__title">Зайчик-попрыгайчик</h3>
+                </a>
                 <p class="product-card__dimensions">Рост 30 см, вес 200 г</p>
                 <p class="product-card__price">1 200 руб.</p>
               </div>
-            </a>
+            </div>
             <a class="product-card__cart-link" href="#">
               <svg width="21" height="18">
                 <use href="./img/sprite.svg#icon-cart"></use>
@@ -110,18 +114,22 @@
             </a>
           </li>
           <li class="main-catalog__item product-card">
-            <a class="product-card__link" href="#">
-              <picture>
-                <source media="(min-width: 1150px)" srcset="img/content/catalog/catalog-cart-desktop.jpg 1x, img/content/catalog/catalog-cart-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/content/catalog/catalog-cart-tablet.jpg 1x, img/content/catalog/catalog-cart-tablet@2x.jpg 2x">
-                <img class="product-card__image" src="img/content/catalog/catalog-cart-mobile.jpg" srcset="img/content/catalog/catalog-cart-mobile.jpg 1x, img/content/catalog/catalog-cart-mobile@2x.jpg 2x" width="260" height="195" alt="Вязаная корзинка для игрушек.">
-              </picture>
-              <div class="product-card__info">
-                <h3 class="product-card__title">Корзинка для белья</h3>
+            <div class="product-card__wrapper">
+              <a href="" class="product-card__image-link">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/content/catalog/catalog-cart-desktop.jpg 1x, img/content/catalog/catalog-cart-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/content/catalog/catalog-cart-tablet.jpg 1x, img/content/catalog/catalog-cart-tablet@2x.jpg 2x">
+                  <img class="product-card__image" src="img/content/catalog/catalog-cart-mobile.jpg" srcset="img/content/catalog/catalog-cart-mobile.jpg 1x, img/content/catalog/catalog-cart-mobile@2x.jpg 2x" width="260" height="195" alt="Вязаная корзинка для игрушек.">
+                </picture>
+              </a>
+              <div class="product-card__info product-card__info--cart">
+                <a href="" class="product-card__title-link">
+                  <h3 class="product-card__title">Корзинка для белья</h3>
+                </a>
                 <p class="product-card__dimensions">Диаметр 15 см, высота 10 см</p>
                 <p class="product-card__price">690 руб.</p>
               </div>
-            </a>
+            </div>
             <a class="product-card__cart-link" href="#">
               <svg width="21" height="18">
                 <use href="./img/sprite.svg#icon-cart"></use>
@@ -129,18 +137,22 @@
             </a>
           </li>
           <li class="main-catalog__item product-card">
-            <a class="product-card__link" href="#">
-              <picture>
+            <div class="product-card__wrapper">
+              <a href="" class="product-card__image-link">
+                <picture>
                 <source media="(min-width: 1150px)" srcset="img/content/catalog/catalog-toy-cart-desktop.jpg 1x, img/content/catalog/catalog-toy-cart-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/content/catalog/catalog-toy-cart-tablet.jpg 1x, img/content/catalog/catalog-toy-cart-tablet@2x.jpg 2x">
                 <img class="product-card__image" src="img/content/catalog/catalog-toy-cart-mobile.jpg" srcset="img/content/catalog/catalog-toy-cart-mobile.jpg 1x, img/content/catalog/catalog-toy-cart-mobile@2x.jpg 2x" width="260" height="195" alt="Большая вязаная корзинка для игрушек.">
-              </picture>
-              <div class="product-card__info">
-                <h3 class="product-card__title">Большая корзинка для игрушек</h3>
+                </picture>
+              </a>
+              <div class="product-card__info product-card__info--big-cart">
+                <a href="" class="product-card__title-link">
+                  <h3 class="product-card__title">Большая корзинка для игрушек</h3>
+                </a>
                 <p class="product-card__dimensions">Диаметр 30 см, высота 30 см</p>
                 <p class="product-card__price">1 500 руб.</p>
               </div>
-            </a>
+            </div>
             <a class="product-card__cart-link" href="#">
               <svg width="21" height="18">
                 <use href="./img/sprite.svg#icon-cart"></use>
@@ -159,10 +171,10 @@
           </a>
         </div>
         <div class="production-process__description-wrapper">
-          <p class="production-process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <p class="production-process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         </div>
         <div class="production-process__button-wrapper">
-           <a class="production-process__button button-main button-main--link" href="form.html">Заказать</a>
+           <a class="production-process__button button-main button-main--link" href="form.html">Сделать заказ</a>
         </div>
       </section>
     </main>
