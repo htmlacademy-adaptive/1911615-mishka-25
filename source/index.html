@@ -237,5 +237,40 @@
         </div>
       </div>
     </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal">
+      <div class="modal__container">
+          <form class="modal__order-form modal-form" action="https://echo.htmlacademy.ru/" method="post">
+            <h2 class="modal-form__title">Добавить в корзину</h2>
+            <p class="modal-form__description">Выберите размер:</p>
+            <div class="modal-form__field-group size-button-group">
+              <ul class="size-button-group__list">
+                <li class="size-button-group__item">
+                  <label class="size-button-group__element size-button-control">
+                    <input class="size-button-control__input visually-hidden" type="radio" name="size" value="small" checked>
+                    <span class="size-button-control__label">S</span>
+                  </label>
+                </li>
+                <li class="size-button-group__item">
+                  <label class="size-button-group__element size-button-control">
+                    <input class="size-button-control__input visually-hidden" type="radio" name="size" value="medium">
+                    <span class="size-button-control__label">M</span>
+                  </label>
+                </li>
+                <li class="size-button-group__item">
+                  <label class="size-button-group__element size-button-control">
+                    <input class="size-button-control__input visually-hidden" type="radio" name="size" value="large">
+                    <span class="size-button-control__label">L</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <button class="modal-form__button modal-form__button--submit" type="submit">Добавить</button>
+          </form>
+      </div>
+    </div>
+    <!-- Модальное окно -->
+
   </body>
 </html>
