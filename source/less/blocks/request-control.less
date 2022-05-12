@@ -5,9 +5,10 @@
 
 .request-control__field {
   display: inline-block;
-  padding: 17px;
+  padding: 16px 15px;
   box-sizing: border-box;
   min-width: 260px;
+  width: 100%;
   min-height: 142px;
   border: 2px solid #444444;
   font-weight: 400;
@@ -16,11 +17,29 @@
   color: #444444;
 }
 
+.request-control__field:hover,
+.request-control__field:active,
+.request-control__field:focus,
+.request-control__field:focus-visible {
+  outline: none;
+  border: solid 2px #62d1ba;
+}
+
 .request-control__field::placeholder {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 18px;
-  color: #000000;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .request-control__field {
+    padding: 15px;
+  }
+
+  .request-control__field::placeholder {
+    font-size: 19px;
+    line-height: 20px;
+  }
 }

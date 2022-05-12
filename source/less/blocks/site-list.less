@@ -23,6 +23,14 @@
   word-wrap: break-word;
 }
 
+.site-list__link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.site-list__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 @media (min-width: @tablet-width) {
   .site-list {
     display: grid;
@@ -36,15 +44,19 @@
   }
 
   .site-list__link {
-    padding: 22px 36px 20px 0;
+    padding: 20px 17px 20px 20px;
     font-size: 15px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .site-list__link {
-    padding: 32.5px 35px 20px;
+    padding: 33px 35px 20px 35px;
     font-size: 17px;
+  }
+
+  .site-list__item {
+    min-height: 89px;
   }
 
   .site-list__item + .site-list__item {

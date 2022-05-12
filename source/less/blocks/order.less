@@ -1,26 +1,37 @@
 .order {
   font-family: "Open Sans", "Arial", sans-serif;
-  padding: 17px 30px 0;
+  padding: 17px 0 0;
 }
 
 .order__description {
-  margin: 0;
-  padding-bottom: 29px;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 30px 29px;
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
   color: #444444;
+  width: @mobile-width;
+  word-wrap: break-word;
 }
 
 @media (min-width: @tablet-width) {
   .order {
-    padding: 54px 50px 0;
+    padding: 54px 0 0;
   }
 
   .order__description {
-    padding-bottom: 29px;
+    padding: 1px 50px 29px;
     font-size: 17px;
     line-height: 30px;
+    width: @tablet-width;
   }
+}
 
+@media (min-width: @desktop-width) {
+  .order__description {
+    padding: 45px 225px 29px;
+    width: @desktop-width;
+  }
 }

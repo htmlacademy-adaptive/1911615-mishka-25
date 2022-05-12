@@ -19,7 +19,15 @@
   line-height: 24px;
 }
 
-@media (min-width: @tablet-width) {
+.special-list__link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.special-list__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: @desktop-width) {
   .special-list {
     display: grid;
     grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
@@ -30,12 +38,8 @@
     box-shadow: none;
   }
 
-  .special-list__item:first-of-type .special-list__link {
-    padding-left: 0;
-  }
-
   .special-list__link {
-    padding: 20px 58px 20px 0;
+    padding: 18px 30px 20px 31px;
     font-size: 15px;
     line-height: 24px;
   }

@@ -1,15 +1,16 @@
 .categories-list {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   background-color: #56c3b2;
 }
 
 .categories-list__item {
   position: relative;
+  min-height: 103px;
 }
 
-.categories-list__item--interior .categories-list__link::after {
+.categories-list__item--interior .categories-list__description::after {
   content: "";
   position: absolute;
   top: 23px;
@@ -24,14 +25,9 @@
     top: 30px;
     right: 36px;
   }
-
-  @media (min-width: @desktop-width) {
-    top: 31px;
-    right: 33px;
-  }
 }
 
-.categories-list__item--kids .categories-list__link::after {
+.categories-list__item--kids .categories-list__description::after {
   content: "";
   position: absolute;
   top: 21px;
@@ -44,7 +40,7 @@
 
   @media (min-width: @tablet-width) {
     top: 30px;
-    right: 36px;
+    right: 33px;
   }
 
   @media (min-width: @desktop-width) {
@@ -53,18 +49,78 @@
   }
 }
 
+.categories-list__item:hover .categories-list__description::after {
+  opacity: 0.7;
+  margin-top: -5px;
+}
+
+.categories-list__item:active .categories-list__description::after {
+  opacity: 0.3;
+  margin-top: -5px;
+}
+
+.categories-list__item:hover,
+.categories-list__item:active {
+  background-color: #46c1ae;
+}
+
 .categories-list__item:nth-of-type(2n+1) {
   background-color: #63d1bb;
+}
+
+.categories-list__item:nth-of-type(2n+1):hover,
+.categories-list__item:nth-of-type(2n+1):active {
+  background-color: #59d5bc;
 }
 
 .categories-list__link {
   display: block;
   box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  width: @mobile-width;
   height: 100%;
-  width: 100%;
   padding: 24px 160px 31px 30px;
   text-decoration: none;
+  text-align: left;
   color: #ffffff;
+}
+
+.categories-list__item:hover .categories-list__link,
+.categories-list__item:active .categories-list__link {
+  padding-top: 19px;
+}
+
+.categories-list__link::before {
+  content: none;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 5px;
+  background-color: #56c3b2;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100vw;
+    left: calc(-1 / 2 * (100vw - 320px));
+  }
+}
+
+.categories-list__item:nth-of-type(2n+1) .categories-list__link::before {
+  background-color: #63d1bb;
+}
+
+.categories-list__item:hover .categories-list__link::before,
+.categories-list__item:active .categories-list__link::before {
+  content: "";
+  background-color: #46c1ae;
+}
+
+.categories-list__item:nth-of-type(2n+1):hover .categories-list__link::before,
+.categories-list__item:nth-of-type(2n+1):active .categories-list__link::before {
+  content: "";
+  background-color: #59d5bc;
 }
 
 .categories-list__description {
@@ -77,8 +133,48 @@
 
 @media (min-width: @tablet-width) {
   .categories-list {
+    width: calc(@tablet-width - 100px);
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/background/zigzag-full-white-tablet.svg");
+      background-repeat: repeat-x;
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+
+  .categories-list__item {
+    min-height: 131px;
+  }
+
+  .categories-list__link {
+    width: 100%;
+    padding: 25px 160px 31px 36px;
+  }
+
+  .categories-list__item:hover .categories-list__link,
+  .categories-list__item:active .categories-list__link {
+    padding-top: 20px;
+  }
+
+  .categories-list__description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .categories-list {
+    width: calc(@desktop-width - 100px);
 
     &::after {
       content: "";
@@ -87,13 +183,24 @@
       left: 0;
       z-index: 1;
       width: 100%;
-      height: 24px;
-      background-image: url("../img/background/zigzag-white.png");
+      height: 34px;
+      background-image: url("../img/background/zigzag-white-desktop.svg");
       background-repeat: repeat-x;
+      border-bottom: 1px solid #ffffff;
     }
   }
 
   .categories-list__item {
-    min-height: 131px;
+    min-height: 136px;
+  }
+
+
+  .categories-list__link {
+    padding: 26px 160px 31px 36.5px;
+  }
+
+  .categories-list__item:hover .categories-list__link,
+  .categories-list__item:active .categories-list__link {
+    padding-top: 21px;
   }
 }

@@ -1,9 +1,11 @@
 .text-group {
+  box-sizing: border-box;
   font-family: "Open Sans", "Arial", sans-serif;
-  margin: 0;
+  margin: 1px auto 0;
   padding: 0;
   border: none;
   border-top: 1px solid #62d1ba;
+  width: calc(@mobile-width - 60px);
 }
 
 .text-group__title {
@@ -12,15 +14,15 @@
   padding: 0;
   font-weight: 700;
   font-size: 17px;
-  line-height: 17px;
+  line-height: 18px;
   color: #62d1bb;
   text-transform: uppercase;
 }
 
 .text-group__list {
   margin: 0;
-  margin-top: 28.85px;
-  margin-bottom: 34.5px;
+  margin-top: 28px;
+  margin-bottom: 33.5px;
   padding: 0;
   list-style: none;
 }
@@ -31,22 +33,25 @@
 
 @media (min-width: @tablet-width) {
   .text-group {
-    margin: 0 -50px;
-    padding: 0 50px;
     border-top: none;
     display: grid;
     grid-template-columns: 147px 1fr;
+    grid-template-areas: "group__title group__list";
     column-gap: 20px;
+    width: calc(@tablet-width - 100px);
   }
 
   .text-group__title {
+    grid-area: group__title;
     float: left;
     padding-top: 66px;
     width: 100%;
   }
 
   .text-group__list {
-    margin-top: 50px;
+    grid-area: group__list;
+    margin-top: 49px;
+    margin-bottom: 49.5px;
   }
 
   .text-group__item + .text-group__item {
@@ -56,15 +61,16 @@
 
 @media (min-width: @desktop-width) {
   .text-group {
-    grid-template-columns: 154px 1fr;
+    grid-template-columns: 157px 1fr;
+    width: calc(@desktop-width - 100px);
   }
 
   .text-group__title {
-    padding-left: 46px;
+    padding-left: 61px;
     padding-top: 67px;
   }
 
   .text-group__item {
-    margin-right: 173px;
+    margin-right: 175px;
   }
 }
