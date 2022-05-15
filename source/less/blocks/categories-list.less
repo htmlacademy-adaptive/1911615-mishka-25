@@ -49,7 +49,9 @@
   }
 }
 
-.categories-list__item:hover .categories-list__description::after {
+.categories-list__item:hover .categories-list__description::after,
+.categories-list__item:focus .categories-list__description::after,
+.categories-list__item:focus-within .categories-list__description::after {
   opacity: 0.7;
   margin-top: -5px;
 }
@@ -60,7 +62,10 @@
 }
 
 .categories-list__item:hover,
-.categories-list__item:active {
+.categories-list__item:active,
+.categories-list__item:focus,
+.categories-list__item:focus-within {
+  outline: none;
   background-color: #46c1ae;
 }
 
@@ -69,7 +74,9 @@
 }
 
 .categories-list__item:nth-of-type(2n+1):hover,
-.categories-list__item:nth-of-type(2n+1):active {
+.categories-list__item:nth-of-type(2n+1):active,
+.categories-list__item:nth-of-type(2n+1):focus,
+.categories-list__item:nth-of-type(2n+1):focus-within {
   background-color: #59d5bc;
 }
 
@@ -86,7 +93,17 @@
   color: #ffffff;
 }
 
+.categories-list__link:focus {
+  outline: none;
+}
+
+.categories-list__link:focus-visible {
+  outline: none;
+}
+
 .categories-list__item:hover .categories-list__link,
+.categories-list__item:focus .categories-list__link,
+.categories-list__item:focus-within .categories-list__link,
 .categories-list__item:active .categories-list__link {
   padding-top: 19px;
 }
@@ -112,12 +129,16 @@
 }
 
 .categories-list__item:hover .categories-list__link::before,
+.categories-list__item:focus .categories-list__link::before,
+.categories-list__item:focus-within .categories-list__link::before,
 .categories-list__item:active .categories-list__link::before {
   content: "";
   background-color: #46c1ae;
 }
 
 .categories-list__item:nth-of-type(2n+1):hover .categories-list__link::before,
+.categories-list__item:nth-of-type(2n+1):focus .categories-list__link::before,
+.categories-list__item:nth-of-type(2n+1):focus-within .categories-list__link::before,
 .categories-list__item:nth-of-type(2n+1):active .categories-list__link::before {
   content: "";
   background-color: #59d5bc;
@@ -162,6 +183,8 @@
   }
 
   .categories-list__item:hover .categories-list__link,
+  .categories-list__item:focus .categories-list__link,
+  .categories-list__item:focus-within .categories-list__link,
   .categories-list__item:active .categories-list__link {
     padding-top: 20px;
   }
@@ -200,6 +223,8 @@
   }
 
   .categories-list__item:hover .categories-list__link,
+  .categories-list__item:focus .categories-list__link,
+  .categories-list__item:focus-within .categories-list__link,
   .categories-list__item:active .categories-list__link {
     padding-top: 21px;
   }

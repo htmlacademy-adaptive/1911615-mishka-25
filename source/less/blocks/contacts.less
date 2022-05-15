@@ -95,7 +95,10 @@
   }
 }
 
-.contacts__phone-link:hover {
+.contacts__phone-link:hover,
+.contacts__phone-link:focus,
+.contacts__phone-link:focus-visible {
+  outline: none;
   color: #46c1ae;
 
   &::after {

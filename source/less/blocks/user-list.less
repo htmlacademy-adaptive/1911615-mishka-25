@@ -21,12 +21,17 @@
   line-height: 24px;
 }
 
-.user-list__link:hover {
+.user-list__link:hover,
+.user-list__link:focus,
+.user-list__link:focus-visible {
+  outline: none;
   color: rgba(0, 0, 0, 0.6);
   fill: #61d1bb;
 }
 
-.user-list__link:hover .user-list__icon {
+.user-list__link:hover .user-list__icon,
+.user-list__link:focus .user-list__icon,
+.user-list__link:focus-visible .user-list__icon {
   color: rgba(0, 0, 0, 0.6);
   fill: #61d1bb;
 }
