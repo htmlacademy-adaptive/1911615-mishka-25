@@ -23,7 +23,10 @@
   word-wrap: break-word;
 }
 
-.site-list__link:hover {
+.site-list__link:hover,
+.site-list__link:focus,
+.site-list__link:focus-visible {
+  outline: none;
   color: rgba(0, 0, 0, 0.6);
 }
 

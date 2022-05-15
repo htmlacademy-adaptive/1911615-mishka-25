@@ -29,6 +29,11 @@
   border-bottom: solid 2px #62d1ba;
 }
 
+.email-control__field:not(:placeholder-shown):not(:focus):invalid {
+  outline: none;
+  border-bottom: solid 2px #ff0000;
+}
+
 .email-control__field::placeholder {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
@@ -48,6 +53,8 @@
 }
 
 .email-control__field:hover + .email-control__icon,
+.email-control__field:focus + .email-control__icon,
+.email-control__field:focus-visible + .email-control__icon,
 .email-control__field:active + .email-control__icon {
   fill: #62d1ba;
 }

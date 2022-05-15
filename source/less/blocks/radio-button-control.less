@@ -6,7 +6,10 @@
   padding-left: 60px;
 }
 
-.radio-button-control:hover .radio-button-control__mark {
+.radio-button-control:hover .radio-button-control__mark,
+.radio-button-control:focus .radio-button-control__mark,
+.radio-button-control:focus-within .radio-button-control__mark {
+  outline: none;
   border: 2px solid #62d1ba;
 }
 

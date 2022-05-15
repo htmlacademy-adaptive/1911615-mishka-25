@@ -25,6 +25,11 @@
   border: solid 2px #62d1ba;
 }
 
+.request-control__field:not(:placeholder-shown):not(:focus):invalid {
+  outline: none;
+  border-bottom: solid 2px #ff0000;
+}
+
 .request-control__field::placeholder {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
