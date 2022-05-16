@@ -12,7 +12,7 @@ function init () {
         }, {
             iconLayout: 'default#image',
             iconImageClipRect: [[0,0], [67, 100]],
-            iconImageHref: "img/icons/icon-map-pin.svg",
+            iconImageHref: 'img/icons/icon-map-pin.svg',
             iconImageSize: [67, 100],
             iconImageOffset: [-40, -100],
         });
